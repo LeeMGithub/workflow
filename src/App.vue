@@ -1,15 +1,14 @@
+<script setup lang="ts">
+    import { ElConfigProvider } from 'element-plus';
+    import zhCn from 'element-plus/es/locale/lang/zh-cn';
+</script>
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite test" />
+    <el-config-provider :locale="zhCn">
+        <router-view />
+    </el-config-provider>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+<style>
+    @import './assets/css/main.css';
+    @import './assets/css/color-dark.css';
+</style>
